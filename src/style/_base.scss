@@ -1,0 +1,113 @@
+
+$space: 8px;
+$normal-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$bg-color: #272823;
+$primary-color: #10e810;
+
+$break-point-m: 768px;
+$break-point-l: 1024px;
+$break-point-xl: 1440px;
+
+body {
+  color: $primary-color;
+  font-family: $normal-font;
+  letter-spacing: 2.5px;
+}
+
+a,
+a:link,
+a:visited,
+a:active,
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  width: 100%;
+  padding: 0;
+  list-style: none;
+}
+
+/*
+ util
+ */
+dl.horizontal{
+  dt{
+    text-align: center;
+    width: $space * 3;
+    float: left;
+  }
+  dd{
+    margin-bottom: $space;
+    margin-left: $space * 3;
+  }
+}
+
+
+.font-style-title {
+  font-family: 'Cutive Mono', monospace;
+}
+.font-style-normal {
+  font-family: $normal-font;
+}
+.text-center {
+  text-align: center;
+}
+
+.m-0 {margin: 0}
+.m-t-0 {margin-top: 0}
+.m-x {margin-left: $space; margin-right: $space;}
+.m-x-m {margin-left: $space * 2; margin-right: $space * 2;}
+.m-x-l {margin-left: $space * 3; margin-right: $space * 3;}
+.m-y {margin-top: $space; margin-bottom: $space;}
+.m-y-m {margin-top: $space * 2; margin-bottom: $space * 2;}
+.m-y-l {margin-top: $space * 3; margin-bottom: $space * 3;}
+.m-t {margin-top: $space;}
+.m-b {margin-bottom: $space;}
+.m-r {margin-right: $space}
+.m-l {margin-left: $space}
+.m-t-m {margin-top: $space * 2}
+.m-b-m {margin-bottom: $space * 2}
+.m-r-m {margin-right: $space * 2}
+.m-l-m {margin-left: $space * 2}
+.m-t-l {margin-top: $space * 3}
+.m-b-l {margin-bottom: $space * 3}
+.m-r-l {margin-right: $space * 3}
+.m-l-l {margin-left: $space * 3}
+
+.p-a {padding: $space;}
+.p-a-m {padding: $space * 2;}
+
+.float-l {float: left;}
+
+/*
+ layout
+ */
+.flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-center{
+  justify-content: center;
+  align-items: center;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/**
+ form
+ */
+.reset-button {
+  outline: none;
+  border: none;
+  background: none;
+  color: inherit;
+  -webkit-appearance: none;
+}

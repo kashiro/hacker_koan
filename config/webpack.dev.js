@@ -1,0 +1,24 @@
+/* eslint-disable new-cap */
+const webpack = require('webpack');
+const Merge = require('webpack-merge');
+const CommonConfig = require('./webpack.common.js');
+
+
+module.exports = Merge(CommonConfig, {
+  module: {
+    rules: [
+      {
+        test: /\.scss$/,
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
+      }
+    ]
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
+  devServer: {
+    hot: true,
+    contentBase: './dist'
+  },
+  devtool: 'cheap-module-eval-source-map'
+});
