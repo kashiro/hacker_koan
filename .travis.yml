@@ -1,0 +1,16 @@
+sudo: required
+install:
+  - nvm install node
+  - nvm alias default node
+  - npm install
+script:
+  - npm test
+after_script:
+  - npm run build
+deploy:
+  provider: pages
+  local_dir: dist
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master

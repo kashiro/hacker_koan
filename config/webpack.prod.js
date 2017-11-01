@@ -6,7 +6,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = Merge(CommonConfig, {
   output: {
-    filename: '[name].[chunkhash].bundle.js'
+    filename: '[name].[chunkhash].bundle.js',
+    publicPath: '/hacker_koans/'
   },
   module: {
     rules: [
