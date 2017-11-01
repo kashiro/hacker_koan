@@ -4,7 +4,8 @@
   "description": "list popular koans repositories in github.",
   "scripts": {
     "build": "webpack -p --config config/webpack.prod.js",
-    "serve": "webpack-dev-server --open --config config/webpack.dev.js"
+    "serve": "webpack-dev-server --open --config config/webpack.dev.js",
+    "test": "echo skip"
   },
   "author": "Tomoyuki Kashiro",
   "license": "MIT",
