@@ -1,4 +1,7 @@
 sudo: required
+cache:
+  directories:
+    - node_modules
 install:
   - nvm install node
   - nvm alias default node
