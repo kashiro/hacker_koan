@@ -4,6 +4,7 @@ import Menu from './menu';
 import Item from './item';
 import Header from './header';
 import Modal from './modal';
+import Loading from './loading';
 
 export default class App extends Component {
 
@@ -21,6 +22,7 @@ export default class App extends Component {
   }
 
   handleSubmit(language) {
+    this.setState({items: null});
     this.loadItems(language);
     this.handleClickMenu(false);
   }
@@ -48,11 +50,18 @@ export default class App extends Component {
         <Header
           onClickAbout={this.handleClickAbout.bind(this, true)}
           onClikMenu={this.handleClickMenu.bind(this, true)}/>
-        <ul class="m-0 result">
-          {items.map( (data, i) => (
-            <li class="result-item m-b-m"><Item data={data}></Item></li>
-          ))}
-        </ul>
+        <div class="result">
+          {(() => {
+            if (items === null) {
+              return <Loading />
+            } else {
+              return <ul class="m-0">{items.map((data) => (
+                <li class="result-item m-b-m"><Item data={data}></Item></li>
+                ))}
+              </ul>
+            }
+          })()}
+        </div>
       </div>
     );
   }
