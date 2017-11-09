@@ -1,4 +1,3 @@
-
 const URL = 'https://api.github.com/search/repositories?sort=stars&order=desc';
 
 function makeQuery(language) {

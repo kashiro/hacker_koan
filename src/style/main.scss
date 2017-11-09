@@ -1,9 +1,6 @@
-
-
 @import 'base';
 
-
-.background{
+.background {
   background-color: $bg-color;
 }
 
@@ -50,7 +47,7 @@
     margin-bottom: $space * 4;
     cursor: pointer;
   }
-  [class^="devicon-"] {
+  [class^='devicon-'] {
     font-size: 30px;
     margin-bottom: $space;
   }
@@ -73,7 +70,8 @@
   width: 100vw;
   height: 100vh;
   position: fixed;
-  top:0; left: 0;
+  top: 0;
+  left: 0;
   display: none;
   &.is-open {
     display: flex;
@@ -81,7 +79,8 @@
 
   &-close {
     position: absolute;
-    top: 10px; right: 10px;
+    top: 10px;
+    right: 10px;
   }
   &-content {
     background-color: $bg-color;
@@ -91,7 +90,8 @@
     max-width: $break-point-m;
     padding: $space * 5 $space $space * 2;
     box-sizing: border-box;
-    margin-right: auto; margin-left: auto;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -104,7 +104,8 @@
   }
   &-cursor {
     display: inline-block;
-    width: 0.5em; height: 1em;
+    width: 0.5em;
+    height: 1em;
     vertical-align: sub;
     background-color: $primary-color;
   }
@@ -113,7 +114,7 @@
     &-title {
       font-size: 40px;
     }
-    &-lead br{
+    &-lead br {
       display: none;
     }
   }
@@ -139,7 +140,8 @@
       width: 33.3%;
     }
     &-item {
-      padding-left: $space; padding-right: $space;
+      padding-left: $space;
+      padding-right: $space;
     }
   }
 }

@@ -12,17 +12,15 @@ module.exports = Merge(CommonConfig, {
           'style-loader',
           'css-loader',
           'postcss-loader',
-          'sass-loader'
-        ]
-      }
-    ]
+          'sass-loader',
+        ],
+      },
+    ],
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
+  plugins: [new webpack.HotModuleReplacementPlugin()],
   devServer: {
     hot: true,
-    contentBase: './dist'
+    contentBase: './dist',
   },
-  devtool: 'cheap-module-eval-source-map'
+  devtool: 'cheap-module-eval-source-map',
 });
