@@ -6,6 +6,14 @@
     "node": true,
     "es6": true
   },
+  "plugins": [
+    "react"
+  ],
+  "settings": {
+    "react": {
+      "pragma": "h"
+    }
+  },
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true,
@@ -13,6 +21,7 @@
     }
   },
   "rules" : {
+    "react/jsx-uses-react": "error",
     "arrow-parens": ["error", "as-needed"],
     "no-empty-pattern": "off",
     "require-jsdoc": "off"
