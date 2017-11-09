@@ -34,7 +34,6 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
-    "moment": "^2.19.1",
     "preact": "^8.2.5"
   }
 }
