@@ -5,12 +5,12 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
   context: process.cwd(),
   entry: {
-    'app': './src/index.js'
+    app: './src/index.js',
   },
   output: {
     path: path.resolve(process.cwd(), './dist/'),
     filename: '[name].bundle.js',
-    publicPath: '/'
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -18,22 +18,21 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loaders: ['babel-loader'],
-        include: path.resolve(process.cwd(), 'src/')
+        include: path.resolve(process.cwd(), 'src/'),
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
         loaders: ['eslint-loader'],
       },
-    ]
+    ],
   },
   plugins: [
     new CleanWebpackPlugin(['dist'], {
-      root: path.resolve(process.cwd())
+      root: path.resolve(process.cwd()),
     }),
     new HtmlWebpackPlugin({
-      template: 'src/index.html'
-    })
-  ]
+      template: 'src/index.html',
+    }),
+  ],
 };
-

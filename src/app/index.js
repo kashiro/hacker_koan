@@ -7,14 +7,15 @@ import Modal from './modal';
 import Loading from './loading';
 
 export default class App extends Component {
-
   constructor() {
     super();
     this.setState({items: [], menuOpen: false, aboutOpen: false});
   }
 
   loadItems(language) {
-    RepositoryClient.search(language).then(res => this.setState({items: res.items}));
+    RepositoryClient.search(language).then(res =>
+      this.setState({items: res.items})
+    );
   }
 
   componentDidMount() {
@@ -38,27 +39,54 @@ export default class App extends Component {
   render({}, {items, menuOpen, aboutOpen}) {
     return (
       <div>
-        <Modal isOpen={menuOpen} onClose={this.handleClickMenu.bind(this, false)}><Menu onSelect={this.handleSubmit.bind(this)}/></Modal>
-        <Modal isOpen={aboutOpen} onClose={this.handleClickAbout.bind(this, false)}>
-          <blockquote class="m-0 text-center about" cite="http://lean.codecomputerlove.com/programming-koans-the-what-how-why/">
-            <p class="about-p m-t-0 m-b-l">koan is to explain programming concepts through unit tests.</p>
-            <p class="about-p m-y-l">presenting failing tests and requiring the candidate to fix the tests in an effort to imbue knowledge.</p>
-            <p class="about-p m-y-l">Going through a koan is a good method of jumping into using a new programming language.</p>
-            <p class="about-p m-y-l">Ref. : <a href="http://lean.codecomputerlove.com/programming-koans-the-what-how-why/">Programming Koans: The what, how and why</a></p>
+        <Modal
+          isOpen={menuOpen}
+          onClose={this.handleClickMenu.bind(this, false)}>
+          <Menu onSelect={this.handleSubmit.bind(this)} />
+        </Modal>
+        <Modal
+          isOpen={aboutOpen}
+          onClose={this.handleClickAbout.bind(this, false)}>
+          <blockquote
+            class="m-0 text-center about"
+            cite="http://lean.codecomputerlove.com/programming-koans-the-what-how-why/">
+            <p class="about-p m-t-0 m-b-l">
+              koan is to explain programming concepts through unit tests.
+            </p>
+            <p class="about-p m-y-l">
+              presenting failing tests and requiring the candidate to fix the
+              tests in an effort to imbue knowledge.
+            </p>
+            <p class="about-p m-y-l">
+              Going through a koan is a good method of jumping into using a new
+              programming language.
+            </p>
+            <p class="about-p m-y-l">
+              Ref. :{' '}
+              <a href="http://lean.codecomputerlove.com/programming-koans-the-what-how-why/">
+                Programming Koans: The what, how and why
+              </a>
+            </p>
           </blockquote>
         </Modal>
         <Header
           onClickAbout={this.handleClickAbout.bind(this, true)}
-          onClikMenu={this.handleClickMenu.bind(this, true)}/>
+          onClikMenu={this.handleClickMenu.bind(this, true)}
+        />
         <div class="result">
           {(() => {
             if (items === null) {
-              return <Loading />
+              return <Loading />;
             } else {
-              return <ul class="m-0">{items.map(data => (
-                <li class="result-item m-b-m"><Item data={data}></Item></li>
-                ))}
-              </ul>
+              return (
+                <ul class="m-0">
+                  {items.map(data => (
+                    <li class="result-item m-b-m">
+                      <Item data={data} />
+                    </li>
+                  ))}
+                </ul>
+              );
             }
           })()}
         </div>

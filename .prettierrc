@@ -1,0 +1,6 @@
+{
+   "single-quote": true,
+   "trailing-comma": "es5",
+   "bracket-spacing": false,
+   "jsx-bracket-same-line": true
+}
