@@ -1,5 +1,4 @@
 import {h, Component} from 'preact';
-import moment from 'moment';
 
 export default class Item extends Component {
   render({data: {owner: {login}, name, forks_count, stargazers_count, description, html_url}}) {

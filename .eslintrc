@@ -1,9 +1,18 @@
 {
-  "extends": ["eslint:recommended", "google"],
+  "extends": ["eslint:recommended"],
   "parser": "babel-eslint",
   "env": {
     "browser": true,
-    "node": true
+    "node": true,
+    "es6": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "settings": {
+    "react": {
+      "pragma": "h"
+    }
   },
   "parserOptions": {
     "ecmaFeatures": {
@@ -12,6 +21,10 @@
     }
   },
   "rules" : {
-    "comma-dangle": ["error", "never"]
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "arrow-parens": ["error", "as-needed"],
+    "no-empty-pattern": "off",
+    "require-jsdoc": "off"
   }
 }
