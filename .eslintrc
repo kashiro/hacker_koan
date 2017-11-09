@@ -23,6 +23,13 @@
   "rules" : {
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
+
+    "quotes": ["error", "single"],
+    "jsx-quotes": ["error", "prefer-double"],
+    "comma-dangle": ["error", "always-multiline"],
+    "array-bracket-spacing": ["error", "never"],
+    "object-curly-spacing": ["error", "never"],
+
     "arrow-parens": ["error", "as-needed"],
     "no-empty-pattern": "off",
     "require-jsdoc": "off"
