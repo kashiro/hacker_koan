@@ -16,9 +16,15 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
+        exclude: /node_modules/,
         loaders: ['babel-loader'],
         include: path.resolve(process.cwd(), 'src/')
-      }
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loaders: ['eslint-loader'],
+      },
     ]
   },
   plugins: [

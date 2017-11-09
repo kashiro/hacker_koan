@@ -55,7 +55,7 @@ export default class App extends Component {
             if (items === null) {
               return <Loading />
             } else {
-              return <ul class="m-0">{items.map((data) => (
+              return <ul class="m-0">{items.map(data => (
                 <li class="result-item m-b-m"><Item data={data}></Item></li>
                 ))}
               </ul>
