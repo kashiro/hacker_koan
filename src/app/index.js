@@ -9,7 +9,7 @@ import Loading from './loading';
 export default class App extends Component {
   constructor() {
     super();
-    this.setState({items: [], menuOpen: false, aboutOpen: false});
+    this.setState({items: null, menuOpen: false, aboutOpen: false});
   }
 
   loadItems(language) {
@@ -73,13 +73,13 @@ export default class App extends Component {
           onClickAbout={this.handleClickAbout.bind(this, true)}
           onClikMenu={this.handleClickMenu.bind(this, true)}
         />
-        <div class="result">
+        <div>
           {(() => {
             if (items === null) {
               return <Loading />;
             } else {
               return (
-                <ul class="m-0">
+                <ul class="result m-0">
                   {items.map(data => (
                     <li class="result-item m-b-m">
                       <Item data={data} />
