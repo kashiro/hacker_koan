@@ -1,6 +1,7 @@
 {
   "name": "hacker_koans",
   "version": "1.0.0",
+  "repository": "https://github.com/tomoyukikashiro/hacker_koans",
   "description": "list popular koans repositories in github.",
   "scripts": {
     "build": "webpack -p --config config/webpack.prod.js",
