@@ -6,6 +6,7 @@ module.exports = {
   context: process.cwd(),
   entry: {
     app: './src/index.js',
+    font: './src/font.js',
   },
   output: {
     path: path.resolve(process.cwd(), './dist/'),
@@ -32,6 +33,7 @@ module.exports = {
       root: path.resolve(process.cwd()),
     }),
     new HtmlWebpackPlugin({
+      inject: false,
       template: 'src/index.html',
     }),
   ],
