@@ -52,11 +52,17 @@ dl.horizontal {
 }
 
 .font-style-title {
-  font-family: 'Cutive Mono', monospace;
+  font-family: monospace;
 }
 .font-style-normal {
   font-family: $normal-font;
 }
+html.font-loaded {
+  .font-style-title {
+    font-family: 'Cutive Mono', monospace;
+  }
+}
+
 .text-center {
   text-align: center;
 }
@@ -166,3 +172,93 @@ dl.horizontal {
   color: inherit;
   -webkit-appearance: none;
 }
+
+/**
+ font awesome icons
+ */
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.fa-angle-double-right:before {
+  content: "\f101";
+}
+.fa-question:before {
+  content: "\f128";
+}
+.fa-github:before {
+  content: "\f09b";
+}
+.fa-star:before {
+  content: "\f005";
+}
+.fa-code-fork:before {
+  content: "\f126";
+}
+.fa-remove:before,
+.fa-close:before,
+.fa-times:before {
+  content: "\f00d";
+}
+
+/**
+ dev icons
+ */
+[class*=" devicon-"],
+[class^=devicon-] {
+    font-family: devicon;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+.devicon-c-plain:before {
+    content: "\e639"
+}
+.devicon-cplusplus-plain:before {
+    content: "\e635"
+}
+.devicon-csharp-plain:before {
+    content: "\e637"
+}
+.devicon-go-plain:before {
+    content: "\e61b"
+}
+.devicon-java-plain:before {
+    content: "\e842"
+}
+.devicon-javascript-plain:before {
+    content: "\e845"
+}
+.devicon-php-plain:before {
+    content: "\eb71"
+}
+.devicon-python-plain:before {
+    content: "\eb89"
+}
+.devicon-ruby-plain:before {
+    content: "\ebca"
+}
+.devicon-swift-plain:before {
+    content: "\e92b"
+}
+.devicon-typescript-plain:before {
+    content: "\e920"
+}
+
+
+
+
+
+
+
+
+
