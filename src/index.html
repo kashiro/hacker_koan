@@ -10,6 +10,9 @@
     <title>Hacker Koans</title>
     <meta name="description" content="Find the bible for learning programming languages.">
     <link rel="canonical" href="https://tomoyukikashiro.me/hacker_koans/">
+    <% for (var file of htmlWebpackPlugin.files.css) { %>
+      <link rel="stylesheet" href="<%= file %>">
+    <% } %>
 </head>
 <body class="background">
   <main id="app" class="l-main"></main>
