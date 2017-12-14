@@ -4,6 +4,11 @@ const Merge = require('webpack-merge');
 const CommonConfig = require('./webpack.common.js');
 
 module.exports = Merge(CommonConfig, {
+  entry: {
+    app: './src/index.js',
+    font: './src/font.js',
+    sw: './src/sw.js',
+  },
   module: {
     rules: [
       {

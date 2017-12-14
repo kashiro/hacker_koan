@@ -8,6 +8,6 @@ render(<App />, document.getElementById('app'));
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
-    .register('/sw.bundle.js')
+    .register('./sw.bundle.js')
     .then(() => console.info('Service Worker Registered'));
 }

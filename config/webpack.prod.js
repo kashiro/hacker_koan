@@ -4,6 +4,10 @@ const Merge = require('webpack-merge');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = Merge(CommonConfig, {
+  entry: {
+    app: './src/index.js',
+    font: './src/font.js',
+  },
   output: {
     filename: '[name].[chunkhash].bundle.js',
     publicPath: '/hacker_koans/',

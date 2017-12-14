@@ -4,7 +4,7 @@
   "repository": "https://github.com/tomoyukikashiro/hacker_koans",
   "description": "list popular koans repositories in github.",
   "scripts": {
-    "build": "webpack -p --config config/webpack.prod.js",
+    "build": "webpack -p --config config/webpack.prod.js && webpack -p --config config/webpack.sw.prod.js",
     "serve": "webpack-dev-server --open --config config/webpack.dev.js",
     "test": "npm run build"
   },
