@@ -1,9 +1,8 @@
 /* eslint-disable no-console */
-const cacheName = 'hacker_koans-v-1.0.5';
+const cacheName = 'hacker_koans-v-1.0.6';
 const filesToCache = [
-  '/',
-  '/app.bundle.js',
-  '/font.bundle.js',
+  './app.bundle.js',
+  './font.bundle.js',
   'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0',
   'https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/fonts/devicon.woff?-hdf3wh',
